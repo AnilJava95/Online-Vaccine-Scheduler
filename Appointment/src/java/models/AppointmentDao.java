@@ -88,7 +88,7 @@ public class AppointmentDao
 		return apt;
 	}
 
-	public static int edit(Appointment apt)
+	/*public static int edit(Appointment apt)
 	{
 		int status = 0;
 		try
@@ -111,7 +111,7 @@ public class AppointmentDao
 		}
 
 		return status;
-	}
+	}*/
 
 	public static int delete(String id)
 	{

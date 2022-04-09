@@ -17,3 +17,13 @@ null or not. This was fixed.
 chooseTime renamed the variable timeSlot to timeSlotIndex. And changed the value 
 of the radio buttons from timeSlot to timeSlot + 1 to make it match the database. 
 1-5 instead of 0-4.
+
+addAppointment used to turn timeSlot of the date false to mark it reserved. But 
+it was only doing it for timeSlot values 0, 1, 2, 3, and 4. It wasn't reserving 
+the timeSlot if the value was 5. And with the timeSlot + 1 change we made, we 
+needed to check for 1-5 instead of 0-4.
+
+deleteAppointment and editAppointment needed to be changed to use time slots of 
+1-5 instead of 0-4.
+
+AppointmentDao had an unused method edit. Now it is commented out.

@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import models.Appointment;
 import models.AppointmentDao;
-import java.util.UUID;
 import models.Date;
+import java.util.UUID;
 
 public class addAppointment extends HttpServlet
 {
@@ -40,11 +40,11 @@ public class addAppointment extends HttpServlet
 			if (status > 0) {
 				Date date = AppointmentDao.getDate(request.getParameter("date"));
 				switch (timeSlot) {
-					case "0": date.setTimeSlot1("false"); break;
-					case "1": date.setTimeSlot2("false"); break;
-					case "2": date.setTimeSlot3("false"); break;
-					case "3": date.setTimeSlot4("false"); break;
-					case "4": date.setTimeSlot5("false"); break;
+					case "1": date.setTimeSlot1("false"); break;
+					case "2": date.setTimeSlot2("false"); break;
+					case "3": date.setTimeSlot3("false"); break;
+					case "4": date.setTimeSlot4("false"); break;
+					case "5": date.setTimeSlot5("false"); break;
 				}
 				AppointmentDao.editDate(date);
 

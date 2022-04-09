@@ -47,14 +47,12 @@
                             for (int timeSlotIndex = 0; timeSlotIndex <= 4; timeSlotIndex++) {
                                 if ("true".equals(timeSlots[timeSlotIndex])) {
                         %>
-
                         <td>
                             <label class="container"> <%= timeSlotIndex + 8 + ":00"%>
                                 <input type="radio" name="timeSlot" value="<%= timeSlotIndex + 1 %>">
                                 <span class="checkmark"></span>
                             </label>
                         </td>
-
                         <%      }
                             }
                         %>
