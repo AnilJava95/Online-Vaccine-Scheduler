@@ -14,3 +14,6 @@ chooseTime was checking whether parameters from addAppointmentForm were empty
 strings or not. But the radioButton ones needs to be checked whether they are 
 null or not. This was fixed.
 
+chooseTime renamed the variable timeSlot to timeSlotIndex. And changed the value 
+of the radio buttons from timeSlot to timeSlot + 1 to make it match the database. 
+1-5 instead of 0-4.

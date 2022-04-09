@@ -44,13 +44,13 @@
                             String timeSlots[] = { date.getTimeSlot1(), date.getTimeSlot2(), 
                             date.getTimeSlot3(), date.getTimeSlot4(), date.getTimeSlot5() };
                             
-                            for (int timeSlot = 0; timeSlot <= 4; timeSlot++) {
-                                if ("true".equals(timeSlots[timeSlot])) {
+                            for (int timeSlotIndex = 0; timeSlotIndex <= 4; timeSlotIndex++) {
+                                if ("true".equals(timeSlots[timeSlotIndex])) {
                         %>
 
                         <td>
-                            <label class="container"> <%= timeSlot + 8 + ":00"%>
-                                <input type="radio" name="timeSlot" value="<%= timeSlot %>">
+                            <label class="container"> <%= timeSlotIndex + 8 + ":00"%>
+                                <input type="radio" name="timeSlot" value="<%= timeSlotIndex + 1 %>">
                                 <span class="checkmark"></span>
                             </label>
                         </td>
