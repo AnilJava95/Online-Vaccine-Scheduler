@@ -9,10 +9,11 @@
     String name = request.getParameter("name");
     String age = request.getParameter("age");
     String email = request.getParameter("email");
+    String location = request.getParameter("location");
     String dateName = request.getParameter("date");
 
-    if ("" == vaccineType || "" == vaccineDose || "" == name || "" == age 
-       || "" == email || "" == dateName)
+    if (null == vaccineType || null == vaccineDose || "" == name || "" == age 
+       || "" == email || null == location || null == dateName)
         request.getRequestDispatcher("addAppointmentForm.jsp").forward(request, response);
 %>
 
@@ -28,13 +29,13 @@
             <form action="addAppointment" method="post">
                 <input type="hidden" name="vaccine" value="<%= request.getParameter("vaccine") %>"/>
                 <input type="hidden" name="zipcode" value="<%= request.getParameter("zipcode") %>"/>
-                <input type="hidden" name="vaccineType" value="<%= request.getParameter("vaccineType") %>"/>
-                <input type="hidden" name="vaccineDose" value="<%= request.getParameter("vaccineDose") %>"/>
-                <input type="hidden" name="name" value="<%= request.getParameter("name") %>"/>
-                <input type="hidden" name="age" value="<%= request.getParameter("age") %>"/>
-                <input type="hidden" name="email" value="<%= request.getParameter("email") %>"/>
-                <input type="hidden" name="location" value="<%= request.getParameter("location") %>"/>
-                <input type="hidden" name="date" value="<%= request.getParameter("date") %>"/>
+                <input type="hidden" name="vaccineType" value="<%= vaccineType %>"/>
+                <input type="hidden" name="vaccineDose" value="<%= vaccineDose %>"/>
+                <input type="hidden" name="name" value="<%= name %>"/>
+                <input type="hidden" name="age" value="<%= age %>"/>
+                <input type="hidden" name="email" value="<%= email %>"/>
+                <input type="hidden" name="location" value="<%= location %>"/>
+                <input type="hidden" name="date" value="<%= dateName %>"/>
         
                 <table style="border-spacing: 20px;">
                     <tr>

@@ -11,8 +11,8 @@
             <p> Vaccine appointments are unavailable for people with symptoms. <br>
                 Do you have any symptoms of coronavirus?</p>
             
-            <button style="margin:10px"> <a href="findAppointmentForm.jsp" style="text-decoration: none">Yes</a> </button>
-            <button style="margin:10px"> <a href="chooseVaccine.jsp" style="text-decoration: none">No </a> </button>
+            <button style="margin:10px"> <a href="findAppointmentForm.jsp" style="text-decoration: none"> Yes </a> </button>
+            <button style="margin:10px"> <a href="chooseVaccine.jsp" style="text-decoration: none"> No </a> </button>
         </div>
     </body>
 </html>

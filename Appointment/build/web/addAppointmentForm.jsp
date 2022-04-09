@@ -84,10 +84,8 @@
                 </table> <br>
 
                 <h3>Location</h3> <br>
-                <%
-                    for (Location location : locations) {
-                %>
                 <table>
+                <%  for (Location location : locations) { %>
                     <tr>
                         <td>
                             <label class="container"> <%= location.getName() + ": " + location.getAddress() %>
@@ -96,25 +94,22 @@
                             </label>
                         </td>
                     </tr>
-                </table> <br>
                 <%  } %>
+                </table> <br>
                 
                 <h3>Date</h3>
                 <table style="border-spacing: 20px;">
                     <tr>
                         <%
                             List<Date> dates = AppointmentDao.getDates();
-                            for (Date date : dates)
-                            {
+                            for (Date date : dates) {
                         %>
-
-                        <td>
-                            <label class="container"> <%= date.getName()%>
-                                <input type="radio" name="date" value="<%= date.getName()%>">
-                                <span class="checkmark"></span>
-                            </label>
-                        </td>
-
+                            <td>
+                                <label class="container"> <%= date.getName()%>
+                                    <input type="radio" name="date" value="<%= date.getName()%>">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
                         <%  } %>
                     </tr>
                 </table>

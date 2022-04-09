@@ -1,0 +1,16 @@
+4/9/2022
+
+Changed addAppointmentForm's Location section to create 1 table instead of N tables.
+Moved the table creation outside the of the for statement.
+
+chooseTime was checking all the parameters from addAppointmentForm but location. 
+Now it checks that aswell.
+
+chooseTime was using request.getParameter for the parameters twice. Once on top 
+during the security check. And once in the hidden inputs. Now the hidden inputs 
+use the variables created during the security checks.
+
+chooseTime was checking whether parameters from addAppointmentForm were empty 
+strings or not. But the radioButton ones needs to be checked whether they are 
+null or not. This was fixed.
+
